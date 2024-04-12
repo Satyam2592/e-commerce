@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style> 
+          
+          
+        .back{
+               
+             text-align: center;
+             padding:200px;
+             padding-bottom:200px ;
+            background-color: rgb(255, 191, 0);
+            font-size: 48px;
+                    
+        }
+        form{
+            border-radius: 50px;
+            margin: 62px 373px;
+            /* padding: 24px 324px; */
+            background-color: red;
+        }
+        
+    </style> 
+</head>
+<body>
+     
+    
+      
+    <div class="back" >
+        <form action="submit" method="post" onsubmit="return validate()">
+            <input type="text" placeholder="username" name="uname"><br>
+            <input id="pass1" type="password" placeholder="password" name="upass1"><br>
+            <input id="pass2" type="password" placeholder="Re-type password" name="upass2"><br>
+            <button type="submit">submit</button>
+        </form>
+    </div>   
+
+    <script> 
+          
+         var pass1Obj = document.getElementById("pass1");
+        var pass2Obj = document.getElementById("pass2"); 
+        
+        function validate() {
+            if (pass1Obj.value === pass2Obj.value) {
+                window.location.href = 'index.html';
+                return true;
+            } else {
+                alert("Password mismatch");
+                return false;
+            }
+        }
+        
+
+    </script> 
+</body>
+</html>

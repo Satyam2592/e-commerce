@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .dropdown-btn {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .dropdown-btn:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Add styling as needed */
+        /* Reset some default styles for better consistency across browsers */
+body, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Style for the dropdown menu */
+.dropdown-btn {
+    position: relative;
+    display: inline-block;
+    background-color: white;
+}
+
+.menu-title {
+    display: block;
+    padding: 10px;
+    background-color: #cd0d0d;
+    color: #fff;
+    cursor: pointer;
+     width:230px;
+     
+     margin-left: 600px;
+     margin-top: 300px;
+     text-align: center;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(196, 3, 3, 0.2);
+     
+}
+
+.dropdown-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Hover effect for the dropdown */
+.dropdown-btn:hover .dropdown-content {
+    display: block;
+    background-color: rgb(255, 64, 0);
+    padding: 70px;
+    text-align: center;
+
+    margin-left: 600px;
+      
+}
+
+/* Style for links in the dropdown */
+.dropdown-item a {
+    color: #333;
+    display: block;
+    padding: 10px;
+    background-color: rgb(249, 255, 127);
+}
+
+/* Add additional styling as needed */
+
+    </style>
+</head>
+<body>
+    
+    <ul>
+      <li class="menu-category dropdown-btn">
+            <a href="#" class="menu-title">profile</a> 
+
+            <ul class="dropdown-content dropdown-list">
+                <li class="dropdown-item">
+                    <a href="login.html">Admin login</a>
+                </li>
+
+                <li class="dropdown-item">
+                    <a href="login.html">User . login</a>
+                </li>
+
+                <!-- Additional dropdown items --->
+
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

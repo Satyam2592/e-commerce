@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style> 
+  form {
+    width:147px;
+     
+     
+    background-color: #b35400;
+    padding:35px;
+    padding-bottom:120px;
+    padding-top:120px;
+    padding-right:120px; 
+    border:20px;
+    display:flex;
+    flex-direction: column;
+  } 
+   
+   
+ 
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;  
+    font-family: Arial, sans-serif; 
+    
+    background-color: #b37400;
+  }
+  
+  .container {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #b3002a;
+  }
+  
+  
+  
+  label {
+    margin-bottom: 8px;
+    background-color:rgb(255, 132, 0);
+  }
+  
+  input {
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #5a0a0a;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #66a1e1;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #b3b000;
+  }
+    
+   
+      
+</style>
+   
+</head>
+<body>
+  <div class="container" >
+     
+    <form action="connect.php" method="post" onsubmit="return validate()"><h1><i>signup page</i></h1>
+        <input type="text" placeholder="username" name="uname"><br>
+        <input id="pass1" type="password" placeholder="password" name="upass1"><br>
+        <input id="pass2" type="password" placeholder="Re-type password" name="upass2"><br>
+        <button type="signup">signup</button>
+    </form>
+       </div>
+       <script> 
+          
+        var pass1Obj = document.getElementById("pass1");
+       var pass2Obj = document.getElementById("pass2"); 
+       
+       function validate() {
+           if (pass1Obj.value === pass2Obj.value) {
+               window.location.href = 'index.html';
+               return true;
+           } else {
+               alert("Password mismatch");
+               return false;
+           }
+       }
+       </script>
+     
+</body>
+</html>
